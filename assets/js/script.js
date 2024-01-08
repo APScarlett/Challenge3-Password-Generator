@@ -20,9 +20,15 @@ if(passwordSize>= 8 && passwordSize<=128){
     var confirmNumeric=confirm("Do you want to include numeric values in the password?");
     var confirmSpecial=confirm("Do you want to include special characters in the password?");
 
+for (var i=0; i < passwordSize; i++){
+  
+}
+
 
 if(confirmLowerCase){
-    var randomIndex= math.random() * lowercase.length //extends the range from 0 to to 0 to 26 this includes decimals
+    var randomIndex= Math.floor(Math.random() * lowercase.length) 
+    //extends the range from 0 to to 0 to 26 this includes decimals, Math.Floor rounds the numbers down to a whole#
+    savedPassword= savedPassword+lowercase[randomIndex]
 }
 
 
