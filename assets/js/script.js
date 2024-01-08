@@ -1,4 +1,3 @@
-// Assignment Code
 var generateBtn = document.querySelector("#generate");
 
 var lowercase="abcdefghijklmnopqrstuvwxyz";
@@ -20,7 +19,15 @@ if(passwordSize>= 8 && passwordSize<=128){
     var confirmUppercase=confirm("Do you want to include uppercase letters in the password?");
     var confirmNumeric=confirm("Do you want to include numeric values in the password?");
     var confirmSpecial=confirm("Do you want to include special characters in the password?");
+
+
+if(confirmLowerCase){
+    var randomIndex= math.random() * lowercase.length //extends the range from 0 to to 0 to 26 this includes decimals
 }
+
+
+
+  }
 else{
   alert("Invalid Entry, Password length must be between 8 and 128 characters long.");
 }
