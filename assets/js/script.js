@@ -1,5 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+
+var lowercase="abcdefghijklmnopqrstuvwxyz";
+var uppercase=lowercase.toUpperCase();
+//var lowercase=uppercase.toLowerCase
+console.log(uppercase)
 // Added function to call pw generator
 //Add a prompt to ask the user for pw length
 function generatePassword(){
