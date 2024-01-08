@@ -1,6 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-// copy to actual assigment folder
+// Added function to call pw generator
 function generatePassword(){
   var passwordSize=prompt("Enter password length between 8 and 128");
   console.log(passwordSize)
