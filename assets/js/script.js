@@ -3,11 +3,14 @@ var generateBtn = document.querySelector("#generate");
 
 var lowercase="abcdefghijklmnopqrstuvwxyz";
 var uppercase=lowercase.toUpperCase();
+var numeric="0123456789";
+var special="~!@#$%^&*";
 //var lowercase=uppercase.toLowerCase
-console.log(uppercase)
+//console.log(uppercase)
 // Added function to call pw generator
 //Add a prompt to ask the user for pw length
 function generatePassword(){
+  var savedPassword=""
   var passwordSize=prompt("Enter password length between 8 and 129");
   console.log(passwordSize)
 
@@ -21,6 +24,8 @@ if(passwordSize>= 8 && passwordSize<=128){
 else{
   alert("Invalid Entry, Password length must be between 8 and 128 characters long.");
 }
+
+return savedPassword
 
 }
 // Write password to the #password input
