@@ -9,7 +9,7 @@ var special="~!@#$%^&*";
 // Added function to call pw generator
 //Add a prompt to ask the user for pw length
 function generatePassword(){
-  var savedPassword=""
+  var savedPassword="";
   var passwordSize=prompt("Enter password length between 8 and 129");
   console.log(passwordSize)
 
@@ -20,19 +20,22 @@ if(passwordSize>= 8 && passwordSize<=128){
     var confirmNumeric=confirm("Do you want to include numeric values in the password?");
     var confirmSpecial=confirm("Do you want to include special characters in the password?");
 
-for (var i=0; i < passwordSize; i++){
+for (var i=0; i < passwordSize; i++ ){
   
 }
 
 
-if(confirmLowerCase){
-    var randomIndex= Math.floor(Math.random() * lowercase.length) 
+if(confirmLowerCase && savedPassword.LENGTH < savedPassword){
+    var randomIndex = Math.floor(Math.random() * lowercase.length) 
     //extends the range from 0 to to 0 to 26 this includes decimals, Math.Floor rounds the numbers down to a whole#
     savedPassword= savedPassword+lowercase[randomIndex]
 }
-
-
-
+if(confirmUppercase && savedPassword.length < savedPassword){
+  if(confirmUppercase){
+    var randomIndex= Math.floor(Math.random() * uppercase.length) 
+    savedPassword= savedPassword+uppercase[randomIndex]
+  }
+}
   }
 else{
   alert("Invalid Entry, Password length must be between 8 and 128 characters long.");
