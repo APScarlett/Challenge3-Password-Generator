@@ -1,45 +1,38 @@
 var generateBtn = document.querySelector("#generate");
 
-var lowercase="abcdefghijklmnopqrstuvwxyz";
-var uppercase=lowercase.toUpperCase();
-var numeric="0123456789";
-var special="~!@#$%^&*";
+var lowercase = "abcdefghijklmnopqrstuvwxyz";
+var uppercase = lowercase.toUpperCase();
+consolelog.log(uppercase);
+var number= "0123456789";
+var special= "~!@#$%^&*";
 //var lowercase=uppercase.toLowerCase
 //console.log(uppercase)
 // Added function to call pw generator
 //Add a prompt to ask the user for pw length
 function generatePassword(){
-  var savedPassword="";
-  var passwordSize=prompt("Enter password length between 8 and 129");
+  var savedPassword= "";
+  var passwordSize = prompt("Enter password length between 8 and 128");
   console.log(passwordSize)
+  //passwordsize=7
+  if (passwordSize >= 8 && passwordSize <= 128){
+  var confirmLowerCase=confirm("Do you want to include lowercase letters in the password?");
+  console.log(confirmLowerCase);
+  var confirmUppercase=confirm("Do you want to include uppercase letters in the password?");
+  var confirmNumeric=confirm("Do you want to include numeric values in the password?");
+  var confirmSpecial=confirm("Do you want to include special characters in the password?");
 
-if(passwordSize>= 8 && passwordSize<=128){
-    var confirmLowerCase=confirm("Do you want to include lowercase letters in the password?");
-    console.log(confirmLowerCase);
-    var confirmUppercase=confirm("Do you want to include uppercase letters in the password?");
-    var confirmNumeric=confirm("Do you want to include numeric values in the password?");
-    var confirmSpecial=confirm("Do you want to include special characters in the password?");
 
-for (var i=0; i < passwordSize; i++ ){
-  
+if(confirmLowerCase){
+var randomIndex= Math.floor(Math.random() *lowercase.length) // Math.random() multiplied by 26 => extends the range from 0 to 26, this includes decimals
 }
 
 
-if(confirmLowerCase && savedPassword.LENGTH < savedPassword){
-    var randomIndex = Math.floor(Math.random() * lowercase.length) 
-    //extends the range from 0 to to 0 to 26 this includes decimals, Math.Floor rounds the numbers down to a whole#
-    savedPassword= savedPassword+lowercase[randomIndex]
-}
-if(confirmUppercase && savedPassword.length < savedPassword){
-  if(confirmUppercase){
-    var randomIndex= Math.floor(Math.random() * uppercase.length) 
-    savedPassword= savedPassword+uppercase[randomIndex]
-  }
-}
   }
 else{
-  alert("Invalid Entry, Password length must be between 8 and 128 characters long.");
+
 }
+
+
 
 return savedPassword
 
