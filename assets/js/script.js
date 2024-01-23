@@ -2,7 +2,7 @@ var generateBtn = document.querySelector("#generate");
 
 var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var uppercase = lowercase.toUpperCase();
-consolelog.log(uppercase);
+console.log(uppercase);
 var number = "0123456789";
 var special = "~!@#$%^&*";
 //var lowercase=uppercase.toLowerCase
@@ -48,6 +48,14 @@ function generatePassword() {
   console.log(randomIndex)
 
   savedPassword = savedPassword + number[randomIndex]
+}
+
+if (confirmUppercase) {
+  var randomIndex = Math.floor(Math.random() * special.length)
+
+console.log(randomIndex)
+
+savedPassword = savedPassword + special[randomIndex]
 }
 
 
