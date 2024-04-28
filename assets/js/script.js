@@ -42,7 +42,7 @@ function generatePassword() {
     savedPassword = savedPassword + uppercase[randomIndex]
   }
 
-  if (confirmUppercase) {
+  if (confirmNumeric) {
     var randomIndex = Math.floor(Math.random() * number.length)
  
   console.log(randomIndex)
@@ -50,7 +50,7 @@ function generatePassword() {
   savedPassword = savedPassword + number[randomIndex]
 }
 
-if (confirmUppercase) {
+if (confirmSpecial) {
   var randomIndex = Math.floor(Math.random() * special.length)
 
 console.log(randomIndex)
