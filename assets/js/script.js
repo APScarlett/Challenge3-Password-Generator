@@ -21,52 +21,43 @@ function generatePassword() {
     var confirmNumeric = confirm("Do you want to include numeric values in the password?");
     var confirmSpecial = confirm("Do you want to include special characters in the password?");
 
-
-    for (var i = 0; i < passwordSize; i++) {
-
-    
+    var selectedCharacters = "";
     if (confirmLowerCase) {
-        var randomIndex = Math.floor(Math.random() * lowercase.length) // Math.random() multiplied by 26 => extends the range from 0 to 26, this includes decimals
-      
-      console.log(randomIndex)
+  
+    //console.log(randomIndex)
 
-      savedPassword = savedPassword + lowercase[randomIndex]
-    }
-
- 
-  if (confirmUppercase) {
-      var randomIndex = Math.floor(Math.random() * uppercase.length)
-   
-    console.log(randomIndex)
-
-    savedPassword = savedPassword + uppercase[randomIndex]
+    //savedPassword = savedPassword + lowercase[randomIndex]
+    selectedCharacters = selectedCharacters + lowercase
   }
 
-  if (confirmNumeric) {
-    var randomIndex = Math.floor(Math.random() * number.length)
- 
-  console.log(randomIndex)
 
-  savedPassword = savedPassword + number[randomIndex]
+if (confirmUppercase) {
+  
+
+  selectedCharacters = selectedCharacters + uppercase
+}
+
+if (confirmNumeric) {
+
+selectedCharacters = selectedCharacters + number
 }
 
 if (confirmSpecial) {
-  var randomIndex = Math.floor(Math.random() * special.length)
 
-console.log(randomIndex)
-
-savedPassword = savedPassword + special[randomIndex]
+selectedCharacters = selectedCharacters + special
 }
+   
 
+    for (var i = 0; i < passwordSize; i++) {
 
-  
+      var randomIndex = Math.floor(Math.random() * selectedCharacters.length)
+      console.log(randomIndex, selectedCharacters.length, selectedCharacters)
+      savedPassword = savedPassword + selectedCharacters[randomIndex]
 }
 
 }
   else {
   }
-
-
 
   return savedPassword
 
